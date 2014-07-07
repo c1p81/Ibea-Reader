@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97C81F29196A9239002BEC99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F28196A9239002BEC99 /* Foundation.framework */; };
+		97C81F2B196A9239002BEC99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F2A196A9239002BEC99 /* CoreGraphics.framework */; };
+		97C81F2D196A9239002BEC99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F2C196A9239002BEC99 /* UIKit.framework */; };
+		97C81F33196A9239002BEC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97C81F31196A9239002BEC99 /* InfoPlist.strings */; };
+		97C81F35196A9239002BEC99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C81F34196A9239002BEC99 /* main.m */; };
+		97C81F39196A9239002BEC99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C81F38196A9239002BEC99 /* AppDelegate.m */; };
+		97C81F3C196A9239002BEC99 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C81F3A196A9239002BEC99 /* Main_iPhone.storyboard */; };
+		97C81F3F196A9239002BEC99 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C81F3D196A9239002BEC99 /* Main_iPad.storyboard */; };
+		97C81F42196A9239002BEC99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C81F41196A9239002BEC99 /* ViewController.m */; };
+		97C81F44196A9239002BEC99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C81F43196A9239002BEC99 /* Images.xcassets */; };
+		97C81F4B196A923A002BEC99 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F4A196A923A002BEC99 /* XCTest.framework */; };
+		97C81F4C196A923A002BEC99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F28196A9239002BEC99 /* Foundation.framework */; };
+		97C81F4D196A923A002BEC99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F2C196A9239002BEC99 /* UIKit.framework */; };
+		97C81F55196A923A002BEC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97C81F53196A923A002BEC99 /* InfoPlist.strings */; };
+		97C81F57196A923A002BEC99 /* Ibea_ReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C81F56196A923A002BEC99 /* Ibea_ReaderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97C81F4E196A923A002BEC99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C81F1D196A9239002BEC99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97C81F24196A9239002BEC99;
+			remoteInfo = "Ibea Reader";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		97C81F25196A9239002BEC99 /* Ibea Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ibea Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97C81F28196A9239002BEC99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		97C81F2A196A9239002BEC99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		97C81F2C196A9239002BEC99 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		97C81F30196A9239002BEC99 /* Ibea Reader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ibea Reader-Info.plist"; sourceTree = "<group>"; };
+		97C81F32196A9239002BEC99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		97C81F34196A9239002BEC99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97C81F36196A9239002BEC99 /* Ibea Reader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ibea Reader-Prefix.pch"; sourceTree = "<group>"; };
+		97C81F37196A9239002BEC99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		97C81F38196A9239002BEC99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		97C81F3B196A9239002BEC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		97C81F3E196A9239002BEC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		97C81F40196A9239002BEC99 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		97C81F41196A9239002BEC99 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		97C81F43196A9239002BEC99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		97C81F49196A923A002BEC99 /* Ibea ReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ibea ReaderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97C81F4A196A923A002BEC99 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		97C81F52196A923A002BEC99 /* Ibea ReaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ibea ReaderTests-Info.plist"; sourceTree = "<group>"; };
+		97C81F54196A923A002BEC99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		97C81F56196A923A002BEC99 /* Ibea_ReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ibea_ReaderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97C81F22196A9239002BEC99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C81F2B196A9239002BEC99 /* CoreGraphics.framework in Frameworks */,
+				97C81F2D196A9239002BEC99 /* UIKit.framework in Frameworks */,
+				97C81F29196A9239002BEC99 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C81F46196A923A002BEC99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C81F4B196A923A002BEC99 /* XCTest.framework in Frameworks */,
+				97C81F4D196A923A002BEC99 /* UIKit.framework in Frameworks */,
+				97C81F4C196A923A002BEC99 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97C81F1C196A9239002BEC99 = {
+			isa = PBXGroup;
+			children = (
+				97C81F2E196A9239002BEC99 /* Ibea Reader */,
+				97C81F50196A923A002BEC99 /* Ibea ReaderTests */,
+				97C81F27196A9239002BEC99 /* Frameworks */,
+				97C81F26196A9239002BEC99 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97C81F26196A9239002BEC99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97C81F25196A9239002BEC99 /* Ibea Reader.app */,
+				97C81F49196A923A002BEC99 /* Ibea ReaderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97C81F27196A9239002BEC99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97C81F28196A9239002BEC99 /* Foundation.framework */,
+				97C81F2A196A9239002BEC99 /* CoreGraphics.framework */,
+				97C81F2C196A9239002BEC99 /* UIKit.framework */,
+				97C81F4A196A923A002BEC99 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97C81F2E196A9239002BEC99 /* Ibea Reader */ = {
+			isa = PBXGroup;
+			children = (
+				97C81F37196A9239002BEC99 /* AppDelegate.h */,
+				97C81F38196A9239002BEC99 /* AppDelegate.m */,
+				97C81F3A196A9239002BEC99 /* Main_iPhone.storyboard */,
+				97C81F3D196A9239002BEC99 /* Main_iPad.storyboard */,
+				97C81F40196A9239002BEC99 /* ViewController.h */,
+				97C81F41196A9239002BEC99 /* ViewController.m */,
+				97C81F43196A9239002BEC99 /* Images.xcassets */,
+				97C81F2F196A9239002BEC99 /* Supporting Files */,
+			);
+			path = "Ibea Reader";
+			sourceTree = "<group>";
+		};
+		97C81F2F196A9239002BEC99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97C81F30196A9239002BEC99 /* Ibea Reader-Info.plist */,
+				97C81F31196A9239002BEC99 /* InfoPlist.strings */,
+				97C81F34196A9239002BEC99 /* main.m */,
+				97C81F36196A9239002BEC99 /* Ibea Reader-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97C81F50196A923A002BEC99 /* Ibea ReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				97C81F56196A923A002BEC99 /* Ibea_ReaderTests.m */,
+				97C81F51196A923A002BEC99 /* Supporting Files */,
+			);
+			path = "Ibea ReaderTests";
+			sourceTree = "<group>";
+		};
+		97C81F51196A923A002BEC99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97C81F52196A923A002BEC99 /* Ibea ReaderTests-Info.plist */,
+				97C81F53196A923A002BEC99 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97C81F24196A9239002BEC99 /* Ibea Reader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C81F5A196A923A002BEC99 /* Build configuration list for PBXNativeTarget "Ibea Reader" */;
+			buildPhases = (
+				97C81F21196A9239002BEC99 /* Sources */,
+				97C81F22196A9239002BEC99 /* Frameworks */,
+				97C81F23196A9239002BEC99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ibea Reader";
+			productName = "Ibea Reader";
+			productReference = 97C81F25196A9239002BEC99 /* Ibea Reader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97C81F48196A923A002BEC99 /* Ibea ReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C81F5D196A923A002BEC99 /* Build configuration list for PBXNativeTarget "Ibea ReaderTests" */;
+			buildPhases = (
+				97C81F45196A923A002BEC99 /* Sources */,
+				97C81F46196A923A002BEC99 /* Frameworks */,
+				97C81F47196A923A002BEC99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97C81F4F196A923A002BEC99 /* PBXTargetDependency */,
+			);
+			name = "Ibea ReaderTests";
+			productName = "Ibea ReaderTests";
+			productReference = 97C81F49196A923A002BEC99 /* Ibea ReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97C81F1D196A9239002BEC99 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = lucainnoc;
+				TargetAttributes = {
+					97C81F48196A923A002BEC99 = {
+						TestTargetID = 97C81F24196A9239002BEC99;
+					};
+				};
+			};
+			buildConfigurationList = 97C81F20196A9239002BEC99 /* Build configuration list for PBXProject "Ibea Reader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97C81F1C196A9239002BEC99;
+			productRefGroup = 97C81F26196A9239002BEC99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97C81F24196A9239002BEC99 /* Ibea Reader */,
+				97C81F48196A923A002BEC99 /* Ibea ReaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97C81F23196A9239002BEC99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C81F3F196A9239002BEC99 /* Main_iPad.storyboard in Resources */,
+				97C81F44196A9239002BEC99 /* Images.xcassets in Resources */,
+				97C81F3C196A9239002BEC99 /* Main_iPhone.storyboard in Resources */,
+				97C81F33196A9239002BEC99 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C81F47196A923A002BEC99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C81F55196A923A002BEC99 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97C81F21196A9239002BEC99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C81F42196A9239002BEC99 /* ViewController.m in Sources */,
+				97C81F39196A9239002BEC99 /* AppDelegate.m in Sources */,
+				97C81F35196A9239002BEC99 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C81F45196A923A002BEC99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C81F57196A923A002BEC99 /* Ibea_ReaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97C81F4F196A923A002BEC99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97C81F24196A9239002BEC99 /* Ibea Reader */;
+			targetProxy = 97C81F4E196A923A002BEC99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97C81F31196A9239002BEC99 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C81F32196A9239002BEC99 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		97C81F3A196A9239002BEC99 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C81F3B196A9239002BEC99 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		97C81F3D196A9239002BEC99 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C81F3E196A9239002BEC99 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		97C81F53196A923A002BEC99 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C81F54196A923A002BEC99 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97C81F58196A923A002BEC99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97C81F59196A923A002BEC99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97C81F5B196A923A002BEC99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ibea Reader/Ibea Reader-Prefix.pch";
+				INFOPLIST_FILE = "Ibea Reader/Ibea Reader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		97C81F5C196A923A002BEC99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ibea Reader/Ibea Reader-Prefix.pch";
+				INFOPLIST_FILE = "Ibea Reader/Ibea Reader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		97C81F5E196A923A002BEC99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ibea Reader.app/Ibea Reader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ibea Reader/Ibea Reader-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Ibea ReaderTests/Ibea ReaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		97C81F5F196A923A002BEC99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ibea Reader.app/Ibea Reader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ibea Reader/Ibea Reader-Prefix.pch";
+				INFOPLIST_FILE = "Ibea ReaderTests/Ibea ReaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97C81F20196A9239002BEC99 /* Build configuration list for PBXProject "Ibea Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C81F58196A923A002BEC99 /* Debug */,
+				97C81F59196A923A002BEC99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97C81F5A196A923A002BEC99 /* Build configuration list for PBXNativeTarget "Ibea Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C81F5B196A923A002BEC99 /* Debug */,
+				97C81F5C196A923A002BEC99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		97C81F5D196A923A002BEC99 /* Build configuration list for PBXNativeTarget "Ibea ReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C81F5E196A923A002BEC99 /* Debug */,
+				97C81F5F196A923A002BEC99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97C81F1D196A9239002BEC99 /* Project object */;
+}
