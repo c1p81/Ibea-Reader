@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface ViewController : UIViewController
+{
+}
+@property (weak, nonatomic) IBOutlet UIWebView *Vista;
 
 @end
