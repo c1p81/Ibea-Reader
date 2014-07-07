@@ -22,6 +22,7 @@
 		97C81F4D196A923A002BEC99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F2C196A9239002BEC99 /* UIKit.framework */; };
 		97C81F55196A923A002BEC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97C81F53196A923A002BEC99 /* InfoPlist.strings */; };
 		97C81F57196A923A002BEC99 /* Ibea_ReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C81F56196A923A002BEC99 /* Ibea_ReaderTests.m */; };
+		97C81F61196A92B1002BEC99 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F60196A92B1002BEC99 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		97C81F52196A923A002BEC99 /* Ibea ReaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ibea ReaderTests-Info.plist"; sourceTree = "<group>"; };
 		97C81F54196A923A002BEC99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97C81F56196A923A002BEC99 /* Ibea_ReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ibea_ReaderTests.m; sourceTree = "<group>"; };
+		97C81F60196A92B1002BEC99 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C81F61196A92B1002BEC99 /* CoreLocation.framework in Frameworks */,
 				97C81F2B196A9239002BEC99 /* CoreGraphics.framework in Frameworks */,
 				97C81F2D196A9239002BEC99 /* UIKit.framework in Frameworks */,
 				97C81F29196A9239002BEC99 /* Foundation.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		97C81F27196A9239002BEC99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97C81F60196A92B1002BEC99 /* CoreLocation.framework */,
 				97C81F28196A9239002BEC99 /* Foundation.framework */,
 				97C81F2A196A9239002BEC99 /* CoreGraphics.framework */,
 				97C81F2C196A9239002BEC99 /* UIKit.framework */,
@@ -202,6 +206,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = lucainnoc;
 				TargetAttributes = {
+					97C81F24196A9239002BEC99 = {
+						DevelopmentTeam = EH76SGX5Y3;
+					};
 					97C81F48196A923A002BEC99 = {
 						TestTargetID = 97C81F24196A9239002BEC99;
 					};
@@ -390,10 +397,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ibea Reader/Ibea Reader-Prefix.pch";
 				INFOPLIST_FILE = "Ibea Reader/Ibea Reader-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -403,10 +412,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ibea Reader/Ibea Reader-Prefix.pch";
 				INFOPLIST_FILE = "Ibea Reader/Ibea Reader-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
