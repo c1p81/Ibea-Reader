@@ -27,11 +27,15 @@ int oldminor;
 {
     [super viewDidLoad];
     
-	_beacons = [[NSMutableArray alloc] init];
+    
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
+    [_Vista loadRequest:[NSURLRequest requestWithURL:url]];
+    
+    _beacons = [[NSMutableArray alloc] init];
     
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
-    
     _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID
                                                        identifier:@"lucainnoc.Ibeareader"];
 }

@@ -23,6 +23,10 @@
 		97C81F55196A923A002BEC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97C81F53196A923A002BEC99 /* InfoPlist.strings */; };
 		97C81F57196A923A002BEC99 /* Ibea_ReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C81F56196A923A002BEC99 /* Ibea_ReaderTests.m */; };
 		97C81F61196A92B1002BEC99 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F60196A92B1002BEC99 /* CoreLocation.framework */; };
+		97D9840B196D2C43001B3D80 /* museo.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D98407196D2C43001B3D80 /* museo.png */; };
+		97D9840C196D2C43001B3D80 /* museo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D98408196D2C43001B3D80 /* museo2.png */; };
+		97D9840D196D2C43001B3D80 /* unifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D98409196D2C43001B3D80 /* unifi.png */; };
+		97D9840E196D2C43001B3D80 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 97D9840A196D2C43001B3D80 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		97C81F54196A923A002BEC99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97C81F56196A923A002BEC99 /* Ibea_ReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ibea_ReaderTests.m; sourceTree = "<group>"; };
 		97C81F60196A92B1002BEC99 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		97D98407196D2C43001B3D80 /* museo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = museo.png; sourceTree = "<group>"; };
+		97D98408196D2C43001B3D80 /* museo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = museo2.png; sourceTree = "<group>"; };
+		97D98409196D2C43001B3D80 /* unifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unifi.png; sourceTree = "<group>"; };
+		97D9840A196D2C43001B3D80 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 		97C81F1C196A9239002BEC99 = {
 			isa = PBXGroup;
 			children = (
+				97D98405196D2C43001B3D80 /* www */,
 				97C81F2E196A9239002BEC99 /* Ibea Reader */,
 				97C81F50196A923A002BEC99 /* Ibea ReaderTests */,
 				97C81F27196A9239002BEC99 /* Frameworks */,
@@ -157,6 +166,25 @@
 				97C81F53196A923A002BEC99 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97D98405196D2C43001B3D80 /* www */ = {
+			isa = PBXGroup;
+			children = (
+				97D98406196D2C43001B3D80 /* images */,
+				97D9840A196D2C43001B3D80 /* index.html */,
+			);
+			path = www;
+			sourceTree = "<group>";
+		};
+		97D98406196D2C43001B3D80 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				97D98407196D2C43001B3D80 /* museo.png */,
+				97D98408196D2C43001B3D80 /* museo2.png */,
+				97D98409196D2C43001B3D80 /* unifi.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,8 +266,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D9840C196D2C43001B3D80 /* museo2.png in Resources */,
 				97C81F3F196A9239002BEC99 /* Main_iPad.storyboard in Resources */,
+				97D9840D196D2C43001B3D80 /* unifi.png in Resources */,
+				97D9840B196D2C43001B3D80 /* museo.png in Resources */,
 				97C81F44196A9239002BEC99 /* Images.xcassets in Resources */,
+				97D9840E196D2C43001B3D80 /* index.html in Resources */,
 				97C81F3C196A9239002BEC99 /* Main_iPhone.storyboard in Resources */,
 				97C81F33196A9239002BEC99 /* InfoPlist.strings in Resources */,
 			);
@@ -481,6 +513,7 @@
 				97C81F5C196A923A002BEC99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97C81F5D196A923A002BEC99 /* Build configuration list for PBXNativeTarget "Ibea ReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +522,7 @@
 				97C81F5F196A923A002BEC99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
