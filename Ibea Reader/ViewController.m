@@ -7,6 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Reachability.h"
+#import "UIView+Toast.h"
+#import <CoreBluetooth/CoreBluetooth.h>
+
+
+
+
 
 #define ESTIMOTE_PROXIMITY_UUID [[NSUUID alloc] initWithUUIDString:@"4506F9C7-00F9-C206-C12C-C2F9C702D3C3"]
 
@@ -17,6 +24,8 @@ int oldminor;
 @property (nonatomic, strong) NSArray *paintings;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLBeaconRegion *beaconRegion;
+@property (nonatomic, strong) CBCentralManager* manager;
+
 
 
 @end
@@ -26,19 +35,52 @@ int oldminor;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        NSLog(@"There IS NO internet connection");
+        /*[self.view makeToast:@"No internet connection. Please Enable Connection and restart the app"
+                    duration:3.0
+                    position:@"center"
+                    ];*/
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No network connection"
+                                                        message:@"Please Enable Connection and restart the app."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        
+    } else {
+        NSLog(@"There IS internet connection");
+        _beacons = [[NSMutableArray alloc] init];
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID
+                                                           identifier:@"lucainnoc.Ibeareader"];
+
+    }
     
-    
+    CBCentralManager *manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
     [_Vista loadRequest:[NSURLRequest requestWithURL:url]];
     
-    _beacons = [[NSMutableArray alloc] init];
-    
-    _locationManager = [[CLLocationManager alloc] init];
-    _locationManager.delegate = self;
-    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID
-                                                       identifier:@"lucainnoc.Ibeareader"];
+ 
 }
+
+
+- (void)centralManagerDidUpdateState:(CBCentralManager *)central{
+    if (central.state != CBCentralManagerStatePoweredOn)
+    {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Bluetooth"
+                                                            message:@"Please Enable Connection and restart the app."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        }
+    }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
