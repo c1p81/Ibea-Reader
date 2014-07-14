@@ -33,6 +33,7 @@
 		97DF3308196E699E001EC081 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DF3307196E699E001EC081 /* SystemConfiguration.framework */; };
 		97DF330B196E6F29001EC081 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DF330A196E6F29001EC081 /* UIView+Toast.m */; };
 		97DF330D196E7A9A001EC081 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DF330C196E7A9A001EC081 /* CoreBluetooth.framework */; };
+		97FCD9231973EFBE003BB8BD /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCD9221973EFBE003BB8BD /* UIView+Toast.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		97DF3309196E6F29001EC081 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "../../../../Downloads/Toast-master/Toast/Toast/UIView+Toast.h"; sourceTree = "<group>"; };
 		97DF330A196E6F29001EC081 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "../../../../Downloads/Toast-master/Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
 		97DF330C196E7A9A001EC081 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		97FCD9211973EFBE003BB8BD /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "../UIView+Toast.h"; sourceTree = "<group>"; };
+		97FCD9221973EFBE003BB8BD /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "../UIView+Toast.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 		97C81F2E196A9239002BEC99 /* Ibea Reader */ = {
 			isa = PBXGroup;
 			children = (
+				97FCD9211973EFBE003BB8BD /* UIView+Toast.h */,
+				97FCD9221973EFBE003BB8BD /* UIView+Toast.m */,
 				97DF3304196E6822001EC081 /* Reachability.h */,
 				97DF3305196E6822001EC081 /* Reachability.m */,
 				97C81F37196A9239002BEC99 /* AppDelegate.h */,
@@ -318,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97FCD9231973EFBE003BB8BD /* UIView+Toast.m in Sources */,
 				97C81F42196A9239002BEC99 /* ViewController.m in Sources */,
 				97C81F39196A9239002BEC99 /* AppDelegate.m in Sources */,
 				97DF3306196E6822001EC081 /* Reachability.m in Sources */,
