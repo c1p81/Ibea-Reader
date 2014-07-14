@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970EE4A01973EC0C00E51D31 /* radar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 970EE49F1973EC0C00E51D31 /* radar.gif */; };
+		97606F181973CDAD004CB964 /* ic_it.png in Resources */ = {isa = PBXBuildFile; fileRef = 97606F171973CDAD004CB964 /* ic_it.png */; };
 		97C81F29196A9239002BEC99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F28196A9239002BEC99 /* Foundation.framework */; };
 		97C81F2B196A9239002BEC99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F2A196A9239002BEC99 /* CoreGraphics.framework */; };
 		97C81F2D196A9239002BEC99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F2C196A9239002BEC99 /* UIKit.framework */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		970EE49F1973EC0C00E51D31 /* radar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = radar.gif; sourceTree = "<group>"; };
+		97606F171973CDAD004CB964 /* ic_it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_it.png; sourceTree = "<group>"; };
 		97C81F25196A9239002BEC99 /* Ibea Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ibea Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C81F28196A9239002BEC99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97C81F2A196A9239002BEC99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -198,6 +202,8 @@
 		97D98406196D2C43001B3D80 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				970EE49F1973EC0C00E51D31 /* radar.gif */,
+				97606F171973CDAD004CB964 /* ic_it.png */,
 				97D98407196D2C43001B3D80 /* museo.png */,
 				97D98408196D2C43001B3D80 /* museo2.png */,
 				97D98409196D2C43001B3D80 /* unifi.png */,
@@ -292,6 +298,8 @@
 				97D9840E196D2C43001B3D80 /* index.html in Resources */,
 				97C81F3C196A9239002BEC99 /* Main_iPhone.storyboard in Resources */,
 				97C81F33196A9239002BEC99 /* InfoPlist.strings in Resources */,
+				97606F181973CDAD004CB964 /* ic_it.png in Resources */,
+				970EE4A01973EC0C00E51D31 /* radar.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

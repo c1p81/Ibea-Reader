@@ -18,6 +18,7 @@
 #define ESTIMOTE_PROXIMITY_UUID [[NSUUID alloc] initWithUUIDString:@"4506F9C7-00F9-C206-C12C-C2F9C702D3C3"]
 
 int oldminor;
+int lingua;
 
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *beacons;
@@ -27,7 +28,6 @@ int oldminor;
 @property (nonatomic, strong) CBCentralManager* manager;
 
 
-
 @end
 
 @implementation ViewController
@@ -35,6 +35,8 @@ int oldminor;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self createToolbar];
+    lingua = 1;
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
     if (networkStatus == NotReachable) {
@@ -71,15 +73,75 @@ int oldminor;
 }
 
 
+- (void)createToolbar {
+    UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc]
+                                  initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                  target:nil action:nil];
+    UIBarButtonItem *italiano = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"Italiano" style:UIBarButtonItemStyleBordered
+                                    target:self action:@selector(italiano:)];
+    UIBarButtonItem *inglese = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"English" style:UIBarButtonItemStyleDone
+                                target:self action:@selector(inglese:)];
+    
+    UIBarButtonItem *francese= [[UIBarButtonItem alloc]
+                                initWithTitle:@"Francais" style:UIBarButtonItemStyleDone
+                                target:self action:@selector(francese:)];
+    
+    NSArray *toolbarItems = [NSArray arrayWithObjects:
+                             italiano,spaceItem, inglese,spaceItem, francese, nil];
+    UIToolbar *toolbar = [[UIToolbar alloc]initWithFrame:
+                          CGRectMake(0, 366+54, 320, 50)];
+    [toolbar setBarStyle:UIBarStyleBlackOpaque];
+    [self.view addSubview:toolbar];
+    [toolbar setItems:toolbarItems];}
+
+-(IBAction)italiano:(UIButton *)sender {
+    [self.view makeToast:@"Italiano"
+                duration:1.2
+                position:@"center"
+     ];
+    lingua = 1;
+    
+}
+
+
+-(IBAction)francese:(UIButton *)sender {
+    [self.view makeToast:@"Francais"
+                duration:1.2
+                position:@"center"
+     ];
+    lingua = 2;
+    
+}
+-(IBAction)inglese:(UIButton *)sender {
+    [self.view makeToast:@"English"
+                duration:1.2
+                position:@"center"
+     ];
+    lingua = 3;
+    
+}
+
+
+
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central{
-    if (central.state != CBCentralManagerStatePoweredOn)
+    if (central.state != CBCentralManagerStateUnsupported)
     {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Bluetooth"
-                                                            message:@"Please Enable Connection and restart the app."
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No BLE"
+                                                            message:@"This device does not support Bluetooth Low Energy"
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
         }
+    if (central.state != CBCentralManagerStateUnauthorized)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No BLE"
+                                                        message:@"This app is not authorized to use Bluetooth Low Energy"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    }
     }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
@@ -123,12 +185,12 @@ int oldminor;
         
      
         
-        
+        NSString *ll = [NSString stringWithFormat:@"%d",lingua];
         
         if (oldminor != closestBeacon.minor.integerValue)
         {
             NSString *ur = @"http://150.217.73.79/luca/jsandroid3.php?uuid=";
-            NSString *unione = [NSString stringWithFormat:@"%@%@%@%@%@%@", ur,@"4506F9C7-00F9-C206-C12C-C2F9C702D3C3", @"&major=",closestBeacon.major,@"&minor=",closestBeacon.minor];
+            NSString *unione = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@", ur,@"4506F9C7-00F9-C206-C12C-C2F9C702D3C3", @"&major=",closestBeacon.major,@"&minor=",closestBeacon.minor,@"&lingua=",ll];
             NSLog([NSString stringWithFormat:@"%@", unione]);
 
             [_Vista loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:unione]]];
