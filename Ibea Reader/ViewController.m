@@ -17,8 +17,12 @@
 
 #define ESTIMOTE_PROXIMITY_UUID [[NSUUID alloc] initWithUUIDString:@"4506F9C7-00F9-C206-C12C-C2F9C702D3C3"]
 
-int oldminor;
-int lingua;
+int oldminor;  // qui viene registrato l'ultimo valore del minor registrato
+int lingua;    // qui viene registrata la lingua in uso
+int maggiore;  // qui viene registrato il valore del major del beacon osservato
+int minore;    // qui viene registrato il valore del minor del beacon osservato
+NSString *ur = @"http://150.217.73.79/luca/jsandroid3.php?uuid=";
+
 
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *beacons;
@@ -35,10 +39,35 @@ int lingua;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self createToolbar];
+    
+    // crea la toolbar
+    //[self createToolbar];
+    
+    //setta la lingua iniziale come italiano
+    //1 = italiano
+    //2 = inglese
+    //3 = francese
     lingua = 1;
+    maggiore =0;
+    minore = 1;
+    
+    _Vista.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    _Vista.autoresizesSubviews = YES;
+    _Vista.scalesPageToFit = YES;
+    
+    //initializzia l'indicatore di attesa per la webview
+    
+    UIActivityIndicatorView *actInd=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    actInd.color=[UIColor blackColor];
+    [actInd setCenter:self.view.center];
+    self.activityIndicator=actInd;
+    [self.Vista addSubview:self.activityIndicator];
+    //[self.Vista loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.youtube.com/watch?v=xUAD0gguFXc"]]];
+
+    //controlla se c'e' connessione di rete
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    //se non c'e' connessione mostra il messaggio d'errore
     if (networkStatus == NotReachable) {
         NSLog(@"There IS NO internet connection");
         /*[self.view makeToast:@"No internet connection. Please Enable Connection and restart the app"
@@ -63,16 +92,26 @@ int lingua;
 
     }
     
+    //inizializza il controllo beacon
     CBCentralManager *manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
 
-    
+    //mostra la home page (locale) per la webview
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
     [_Vista loadRequest:[NSURLRequest requestWithURL:url]];
     
- 
 }
 
+// questo gestisce l'apparire e lo scomparire della wait whell sulla webview
+#pragma mark - UIWebViewDelegate Protocol Methods
+- (void)webViewDidStartLoad:(UIWebView *)Vista{
+    [self.activityIndicator startAnimating];
+}
 
+- (void)webViewDidFinishLoad:(UIWebView *)Vista{
+    [self.activityIndicator stopAnimating];
+}
+
+//crea la toolbar
 - (void)createToolbar {
     UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc]
                                   initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
@@ -96,13 +135,14 @@ int lingua;
     [self.view addSubview:toolbar];
     [toolbar setItems:toolbarItems];}
 
--(IBAction)italiano:(UIButton *)sender {
+//le azioni legate alla toolbar
+/*-(IBAction)italiano:(UIButton *)sender {
     [self.view makeToast:@"Italiano"
                 duration:1.2
                 position:@"center"
      ];
     lingua = 1;
-    
+    [self chiama];
 }
 
 
@@ -112,19 +152,53 @@ int lingua;
                 position:@"center"
      ];
     lingua = 2;
-    
+    [self chiama];
 }
+
 -(IBAction)inglese:(UIButton *)sender {
     [self.view makeToast:@"English"
                 duration:1.2
                 position:@"center"
      ];
     lingua = 3;
-    
+    [self chiama];
+    }
+
+ */
+
+- (IBAction)Italiano:(id)sender {
+    [self.view makeToast:@"Impostato in Italiano"
+                duration:1.2
+                position:@"center"
+     ];
+    lingua = 1;
+    [self chiama];
+
 }
 
 
+- (IBAction)Inglese:(id)sender {
+    [self.view makeToast:@"Set in English"
+                duration:1.2
+                position:@"center"
+     ];
+    lingua = 2;
+    [self chiama];
+}
 
+
+- (void) chiama {
+    NSString *l1 = [NSString stringWithFormat:@"%d",lingua];
+    NSString *l2 = [NSString stringWithFormat:@"%d",maggiore];
+    NSString *l3 = [NSString stringWithFormat:@"%d",minore];
+    NSString *unione = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@", ur,@"4506F9C7-00F9-C206-C12C-C2F9C702D3C3", @"&major=",l2,@"&minor=",l3,@"&lingua=",l1];
+    NSLog([NSString stringWithFormat:@"%@", unione]);
+    
+    // e fa puntare la webview al server
+    [self.Vista loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:unione]]];
+    }
+
+//gestione del manager del beacon
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central{
     if (central.state != CBCentralManagerStateUnsupported)
     {
@@ -158,6 +232,7 @@ int lingua;
 - (void)viewDidAppear:(BOOL)animated
 {
     [_locationManager startRangingBeaconsInRegion:_beaconRegion];
+    oldminor = 0;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -165,6 +240,7 @@ int lingua;
     [_locationManager stopRangingBeaconsInRegion:_beaconRegion];
 }
 
+//funzione principale per la gestione dei beacons
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     if (beacons.count) {
@@ -172,30 +248,43 @@ int lingua;
         CLBeacon *closestBeacon;
         
         for (CLBeacon *beacon in beacons) {
-            //NSLog([NSString stringWithFormat:@"%@", beacon.major]);
-            //NSLog([NSString stringWithFormat:@"%@", beacon.minor]);
+            NSLog([NSString stringWithFormat:@"%@", beacon.major]);
+            NSLog([NSString stringWithFormat:@"%@", beacon.minor]);
             NSLog([NSString stringWithFormat:@"%f", beacon.accuracy]);
             
+            // qui decide quale e' il beacon piu' vicino
             if (beacon.accuracy > 0) {
                 closestBeacon = beacon;
-                
                 break;
             }
         }
         
-     
         
-        NSString *ll = [NSString stringWithFormat:@"%d",lingua];
+        if (closestBeacon.accuracy > 20)
+            {
+            // beacon lontano
+                NSURL *url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
+                [_Vista loadRequest:[NSURLRequest requestWithURL:url]];
+            
+            }
+        else
+            {
         
-        if (oldminor != closestBeacon.minor.integerValue)
-        {
-            NSString *ur = @"http://150.217.73.79/luca/jsandroid3.php?uuid=";
-            NSString *unione = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@", ur,@"4506F9C7-00F9-C206-C12C-C2F9C702D3C3", @"&major=",closestBeacon.major,@"&minor=",closestBeacon.minor,@"&lingua=",ll];
-            NSLog([NSString stringWithFormat:@"%@", unione]);
-
-            [_Vista loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:unione]]];
-            oldminor = closestBeacon.minor.integerValue;
-        }
+                // se e' stato visto un beacon con minor differente dal precedente avvia la richiesta verso il server
+                if (oldminor != closestBeacon.minor.integerValue)
+                    {
+                        maggiore = closestBeacon.major.integerValue;
+                        minore = closestBeacon.minor.integerValue;
+                        NSString *ll = [NSString stringWithFormat:@"%d",lingua];
+                        NSString *unione = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@", ur,@"4506F9C7-00F9-C206-C12C-C2F9C702D3C3", @"&major=",closestBeacon.major,@"&minor=",closestBeacon.minor,@"&lingua=",ll];
+            
+                        NSLog([NSString stringWithFormat:@"%@", unione]);
+                        // e fa puntare la webview al server
+            
+                        [_Vista loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:unione]]];
+                        oldminor = closestBeacon.minor.integerValue;
+                    }
+            }
         
     }
     

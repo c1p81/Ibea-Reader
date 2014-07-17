@@ -13,15 +13,42 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="suv-sN-GMW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="446"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A8O-kv-LhP">
+                                <rect key="frame" x="0.0" y="444" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Italiano" id="Wfi-cQ-59R">
+                                        <connections>
+                                            <action selector="Italiano:" destination="vXZ-lx-hvc" id="EPZ-34-tlD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="English" id="01O-Ba-nO6">
+                                        <connections>
+                                            <action selector="Inglese:" destination="vXZ-lx-hvc" id="gxA-vS-Omw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dIn-4k-Z1j"/>
+                                    <barButtonItem title="Credits" id="jzg-8f-wNM">
+                                        <connections>
+                                            <segue destination="PYA-0X-Nrc" kind="modal" id="Hob-wX-TIM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="suv-sN-GMW">
+                                <rect key="frame" x="0.0" y="20" width="320" height="424"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="suv-sN-GMW" secondAttribute="bottom" constant="36" id="F16-Qj-sHp"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="A8O-kv-LhP" secondAttribute="bottom" constant="-8" id="QeB-CB-EGq"/>
+                            <constraint firstItem="A8O-kv-LhP" firstAttribute="leading" secondItem="2fi-mo-0CV" secondAttribute="trailing" constant="-320" id="cdU-yT-0zh"/>
+                            <constraint firstItem="suv-sN-GMW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="zLu-7X-eKz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="Vista" destination="suv-sN-GMW" id="sBf-4t-dEQ"/>
@@ -29,11 +56,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="230" y="250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Gh0-RN-kQW">
+            <objects>
+                <viewController id="PYA-0X-Nrc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llg-fY-XZf"/>
+                        <viewControllerLayoutGuide type="bottom" id="9hU-gF-hqN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XmK-cu-De1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nearbee_med.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EXl-ZN-8u4">
+                                <rect key="frame" x="40" y="93" width="239" height="176"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NearBee Reader" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCQ-II-tXl">
+                                <rect key="frame" x="97" y="277" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TeY-D7-vI1">
+                                <rect key="frame" x="0.0" y="17" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Credits" id="jzJ-vT-dr3">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="IVf-Gq-hDO">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jN8-Ff-mbe">
+                                                <rect key="frame" x="16" y="7" width="72" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Back" image="back-arrow-7.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="vXZ-lx-hvc" kind="modal" id="Mbr-mT-QXm"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pY7-73-8b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="243"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back-arrow-7.png" width="30" height="30"/>
+        <image name="nearbee_med.jpg" width="729" height="582"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

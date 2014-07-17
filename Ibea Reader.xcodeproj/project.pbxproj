@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		970EE4A01973EC0C00E51D31 /* radar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 970EE49F1973EC0C00E51D31 /* radar.gif */; };
-		97606F181973CDAD004CB964 /* ic_it.png in Resources */ = {isa = PBXBuildFile; fileRef = 97606F171973CDAD004CB964 /* ic_it.png */; };
+		97198ADC197587DF00028818 /* nearbee_med.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97198ADB197587DF00028818 /* nearbee_med.jpg */; };
+		9737729B197436B100F62CAB /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9737729A197436B100F62CAB /* UIView+Toast.m */; };
 		97C81F29196A9239002BEC99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F28196A9239002BEC99 /* Foundation.framework */; };
 		97C81F2B196A9239002BEC99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F2A196A9239002BEC99 /* CoreGraphics.framework */; };
 		97C81F2D196A9239002BEC99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C81F2C196A9239002BEC99 /* UIKit.framework */; };
@@ -33,6 +34,7 @@
 		97DF3308196E699E001EC081 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DF3307196E699E001EC081 /* SystemConfiguration.framework */; };
 		97DF330B196E6F29001EC081 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DF330A196E6F29001EC081 /* UIView+Toast.m */; };
 		97DF330D196E7A9A001EC081 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DF330C196E7A9A001EC081 /* CoreBluetooth.framework */; };
+		97F9FF621976623C0053B167 /* back-arrow-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 97F9FF611976623C0053B167 /* back-arrow-7.png */; };
 		97FCD9231973EFBE003BB8BD /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCD9221973EFBE003BB8BD /* UIView+Toast.m */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +50,9 @@
 
 /* Begin PBXFileReference section */
 		970EE49F1973EC0C00E51D31 /* radar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = radar.gif; sourceTree = "<group>"; };
-		97606F171973CDAD004CB964 /* ic_it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_it.png; sourceTree = "<group>"; };
+		97198ADB197587DF00028818 /* nearbee_med.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nearbee_med.jpg; sourceTree = "<group>"; };
+		97377299197436B100F62CAB /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		9737729A197436B100F62CAB /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		97C81F25196A9239002BEC99 /* Ibea Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ibea Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C81F28196A9239002BEC99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97C81F2A196A9239002BEC99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +84,7 @@
 		97DF3309196E6F29001EC081 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "../../../../Downloads/Toast-master/Toast/Toast/UIView+Toast.h"; sourceTree = "<group>"; };
 		97DF330A196E6F29001EC081 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "../../../../Downloads/Toast-master/Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
 		97DF330C196E7A9A001EC081 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		97F9FF611976623C0053B167 /* back-arrow-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow-7.png"; sourceTree = "<group>"; };
 		97FCD9211973EFBE003BB8BD /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "../UIView+Toast.h"; sourceTree = "<group>"; };
 		97FCD9221973EFBE003BB8BD /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "../UIView+Toast.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +157,8 @@
 				97FCD9221973EFBE003BB8BD /* UIView+Toast.m */,
 				97DF3304196E6822001EC081 /* Reachability.h */,
 				97DF3305196E6822001EC081 /* Reachability.m */,
+				97377299197436B100F62CAB /* UIView+Toast.h */,
+				9737729A197436B100F62CAB /* UIView+Toast.m */,
 				97C81F37196A9239002BEC99 /* AppDelegate.h */,
 				97C81F38196A9239002BEC99 /* AppDelegate.m */,
 				97C81F3A196A9239002BEC99 /* Main_iPhone.storyboard */,
@@ -207,8 +214,9 @@
 		97D98406196D2C43001B3D80 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				97F9FF611976623C0053B167 /* back-arrow-7.png */,
+				97198ADB197587DF00028818 /* nearbee_med.jpg */,
 				970EE49F1973EC0C00E51D31 /* radar.gif */,
-				97606F171973CDAD004CB964 /* ic_it.png */,
 				97D98407196D2C43001B3D80 /* museo.png */,
 				97D98408196D2C43001B3D80 /* museo2.png */,
 				97D98409196D2C43001B3D80 /* unifi.png */,
@@ -302,9 +310,10 @@
 				97C81F44196A9239002BEC99 /* Images.xcassets in Resources */,
 				97D9840E196D2C43001B3D80 /* index.html in Resources */,
 				97C81F3C196A9239002BEC99 /* Main_iPhone.storyboard in Resources */,
+				97F9FF621976623C0053B167 /* back-arrow-7.png in Resources */,
 				97C81F33196A9239002BEC99 /* InfoPlist.strings in Resources */,
-				97606F181973CDAD004CB964 /* ic_it.png in Resources */,
 				970EE4A01973EC0C00E51D31 /* radar.gif in Resources */,
+				97198ADC197587DF00028818 /* nearbee_med.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9737729B197436B100F62CAB /* UIView+Toast.m in Sources */,
 				97FCD9231973EFBE003BB8BD /* UIView+Toast.m in Sources */,
 				97C81F42196A9239002BEC99 /* ViewController.m in Sources */,
 				97C81F39196A9239002BEC99 /* AppDelegate.m in Sources */,

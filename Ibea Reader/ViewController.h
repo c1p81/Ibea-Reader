@@ -18,6 +18,8 @@
     }
 
 @property (weak, nonatomic) IBOutlet UIWebView *Vista;
+@property(nonatomic, strong)UIActivityIndicatorView *activityIndicator;
+
 
 
 @end
