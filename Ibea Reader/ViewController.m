@@ -25,11 +25,14 @@ NSString *ur = @"http://150.217.73.79/luca/jsandroid3.php?uuid=";
 
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, strong) NSMutableArray *beacons;
 @property (nonatomic, strong) NSArray *paintings;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLBeaconRegion *beaconRegion;
 @property (nonatomic, strong) CBCentralManager* manager;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bt_it;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bt_in;
 
 
 @end
@@ -166,23 +169,33 @@ NSString *ur = @"http://150.217.73.79/luca/jsandroid3.php?uuid=";
 
  */
 
-- (IBAction)Italiano:(id)sender {
+- (IBAction)Italiano:(id)item {
     [self.view makeToast:@"Impostato in Italiano"
                 duration:1.2
                 position:@"center"
      ];
     lingua = 1;
+    
+    [(UIBarButtonItem *)item setTitle:@"√Italiano"];
+    _bt_in.title = @"Inglese";
+    //[(UIBarButtonItem *)items obje  setTitle:@"√Italiano"];
+    //UIBarButtonItem *in = [_toolbar.items objectAtIndex:2];
+    //[in.setTitle: @"rr"];
+    //self.in.setTitle = @"Inglese";
+    
     [self chiama];
 
 }
 
 
-- (IBAction)Inglese:(id)sender {
+- (IBAction)Inglese:(id)item {
     [self.view makeToast:@"Set in English"
                 duration:1.2
                 position:@"center"
      ];
     lingua = 2;
+    [(UIBarButtonItem *)item setTitle:@"√English"];
+    _bt_it.title = @"Italiano";
     [self chiama];
 }
 

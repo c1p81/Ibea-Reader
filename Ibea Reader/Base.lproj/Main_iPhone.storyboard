@@ -24,6 +24,7 @@
                                             <action selector="Italiano:" destination="vXZ-lx-hvc" id="EPZ-34-tlD"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="h1f-vx-Loc"/>
                                     <barButtonItem title="English" id="01O-Ba-nO6">
                                         <connections>
                                             <action selector="Inglese:" destination="vXZ-lx-hvc" id="gxA-vS-Omw"/>
@@ -52,6 +53,9 @@
                     </view>
                     <connections>
                         <outlet property="Vista" destination="suv-sN-GMW" id="sBf-4t-dEQ"/>
+                        <outlet property="bt_in" destination="01O-Ba-nO6" id="vpJ-ee-Cjp"/>
+                        <outlet property="bt_it" destination="Wfi-cQ-59R" id="GXj-9e-YdV"/>
+                        <outlet property="toolbar" destination="A8O-kv-LhP" id="Njm-Fm-Tyu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

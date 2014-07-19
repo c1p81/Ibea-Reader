@@ -19,7 +19,8 @@
 
 @property (weak, nonatomic) IBOutlet UIWebView *Vista;
 @property(nonatomic, strong)UIActivityIndicatorView *activityIndicator;
-
+-(IBAction)Inglese:(id)item;
+-(IBAction)Italiano:(id)item;
 
 
 @end
