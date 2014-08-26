@@ -21,7 +21,7 @@ int oldminor;  // qui viene registrato l'ultimo valore del minor registrato
 int lingua;    // qui viene registrata la lingua in uso
 int maggiore;  // qui viene registrato il valore del major del beacon osservato
 int minore;    // qui viene registrato il valore del minor del beacon osservato
-NSString *ur = @"http://150.217.73.79/luca/jsandroid3.php?uuid=";
+NSString *ur = @"http://www.nearbee.it/beacons/jsandroid3.php?uuid=";
 
 
 @interface ViewController ()
